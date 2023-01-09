@@ -14,7 +14,9 @@
     <name>hexagonal-demo-app</name>
     <description>hexagonal-demo-app</description>
     <properties>
-        <java.version>19</java.version>
+        <java.version>17</java.version>
+        <sonar.organization>hexagonal-demo</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
     <dependencies>
         <dependency>
@@ -28,12 +30,15 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
