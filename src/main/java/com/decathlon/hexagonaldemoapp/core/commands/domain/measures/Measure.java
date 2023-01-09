@@ -5,7 +5,5 @@ import java.time.LocalDateTime;
 public abstract class Measure {
 
     LocalDateTime dateTime;
-    LocalDateTime dateTime;
-    LocalDateTime dateTime;
 
 }
