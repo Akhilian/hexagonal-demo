@@ -11,6 +11,9 @@ public class PostgresMeasureRepository implements MeasureRepository {
     public void saveForProject(String project, ArrayList<Measure> measures) {
         // TODO Implem avec la BDD
         System.out.println(project);
-        System.out.println(measures.size());
+
+        for (Measure measure : measures) {
+            System.out.println("🗒 - " + measure);
+        }
     }
 }
