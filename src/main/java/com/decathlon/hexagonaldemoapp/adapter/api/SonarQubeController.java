@@ -18,6 +18,16 @@ public class SonarQubeController {
 
     @PostMapping("/webhook/sonar")
     void newSonarCollect(@RequestBody CollectSonarCommand collectSonarCommand) {
+
+        System.out.println("serverUrl : " + collectSonarCommand.serverUrl);
+        System.out.println("taskId : " + collectSonarCommand.taskId);
+        System.out.println("status : " + collectSonarCommand.status);
+        System.out.println("analysedAt : " + collectSonarCommand.analysedAt);
+        System.out.println("revision : " + collectSonarCommand.revision);
+        System.out.println("project.key : " + collectSonarCommand.project.key);
+        System.out.println("project.url : " + collectSonarCommand.project.url);
+        System.out.println("project.name : " + collectSonarCommand.project.name);
+
         sonarCommandHandler.handle(collectSonarCommand);
     }
 }
